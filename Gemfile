@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.6'
 
 gem 'pg'
 
@@ -12,6 +12,13 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'figaro'
+
+gem 'imgkit'
+gem 'carrierwave'
+gem "fog", "~> 1.3.1"
+gem 'mechanize'
+gem 'sidekiq'
 
 group :doc do
   gem 'sdoc', require: false
