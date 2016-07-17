@@ -27,11 +27,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'rails_12factor', group: :production
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
+
+# Use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development

@@ -1,37 +1,16 @@
-<%= form_for(@link) do |f| %>
-  <% if @link.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@link.errors.count, "error") %> prohibited this link from being saved:</h2>
+= form_for(@link, remote: true) do |f|
+  - if @link.errors.any? %>
+    .error_explanation
+      h2 
+        = pluralize(@link.errors.count, "error")
+        prohibited this link from being saved
 
-      <ul>
-      <% @link.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :given_url %><br>
-    <%= f.text_field :given_url %>
-  </div>
-  <div class="field">
-    <%= f.label :slug %><br>
-    <%= f.text_field :slug %>
-  </div>
-  <div class="field">
-    <%= f.label :clicks %><br>
-    <%= f.number_field :clicks %>
-  </div>
-  <div class="field">
-    <%= f.label :snapshot %><br>
-    <%= f.text_field :snapshot %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      ul
+        - @link.errors.full_messages.each do |msg|
+          li = msg
+      
+  div = link_to image_tag("logo.png"), root_path
+  .field
+    = f.text_field :given_url, :class => "form-control", :placeholder => "Paste a link to shorten"
+  .actions
+    = f.submit 'Shorten Me', :class => "btn btn-primary"

@@ -1,0 +1,13 @@
+doctype html
+html lang='en'
+  head
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
+    title URL Shortener
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body id='#{controller_name}-#{action_name}' data-lang='#{I18n.locale.to_s.downcase}'
+    .container
+      = render 'layouts/new_link'
+      = yield
