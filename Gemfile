@@ -19,6 +19,9 @@ gem 'carrierwave'
 gem "fog", "~> 1.3.1"
 gem 'mechanize'
 gem 'sidekiq'
+gem 'mechanize'
+gem 'jquery-validation-rails'
+gem 'will_paginate'
 
 group :doc do
   gem 'sdoc', require: false
