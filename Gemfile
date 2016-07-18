@@ -25,6 +25,7 @@ gem 'mechanize'
 gem 'jquery-validation-rails'
 gem 'will_paginate'
 
+gem 'redcarpet'
 gem 'roodi'
 gem 'rspec'
 gem 'rspec-mocks'
