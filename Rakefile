@@ -1,17 +1,6 @@
-require 'rake'
-require 'roodi'
-require 'roodi_task'
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
-desc 'Runs all specs and quality tests, then generates documentation'
-task generate_all: [ :roodi, :documentation ]
+require File.expand_path('../config/application', __FILE__)
 
-desc 'Generates HTML version'
-task :documentation do
-  system('redcarpet README.md > README.html') or raise 'unable to generate README.html'
-end
-
-RoodiTask.new do |t|
-  t.verbose = true
-  t.config = File.dirname(__FILE__) + '/roodi.yml'
-  t.patterns = [ '**/*.rb' ]
-end
+UrlShortener::Application.load_tasks
