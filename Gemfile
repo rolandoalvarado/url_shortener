@@ -31,6 +31,8 @@ gem 'rspec-mocks'
 gem 'simplecov'
 gem 'RedCloth'
 
+gem 'rake'
+
 group :doc do
   gem 'sdoc', require: false
 end
