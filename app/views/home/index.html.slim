@@ -4,9 +4,6 @@
 .row
   - @top_links.each do |link|
     .col-lg-3.col-md-4.col-sm-6.col-xs-12.link
-      - if link.snapshot
-        .screenshot-outer
-          = link_to image_tag(link.snapshot.url, class: "screenshot"), link
       p.title
         = truncate(link.title, length: 60)
       p.short_url

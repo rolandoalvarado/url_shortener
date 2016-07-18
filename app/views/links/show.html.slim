@@ -4,8 +4,8 @@ p.notice = notice
   .screenshot-outer-individual
     = link_to image_tag(@link.snapshot.url, class: "screenshot"), @link
 
-p.title" = @link.title
-p.short_url" = link_to @link.display_slug, @link.display_slug, target: '_blank'
+p.title = @link.title
+p.short_url = link_to @link.display_slug, @link.display_slug, target: '_blank'
 
 ul.click_time
   li
