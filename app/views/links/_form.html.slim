@@ -1,8 +1,7 @@
 = form_for(@link, remote: true) do |f|
-  - if @link.errors.any? %>
+  - if @link.errors.any?
     .error_explanation
-      h2 
-        = pluralize(@link.errors.count, "error")
+      h2 = pluralize(@link.errors.count, "error")
         prohibited this link from being saved
 
       ul
@@ -11,6 +10,6 @@
       
   div = link_to image_tag("logo.png"), root_path
   .field
-    = f.text_field :given_url, :class => "form-control", :placeholder => "Paste a link to shorten"
+    = f.text_field :given_url, :class => "form-control", :size => '80', :maxlength => '254', :placeholder => "Paste a link to shorten"
   .actions
-    = f.submit 'Shorten Me', :class => "btn btn-primary"
+    = f.submit 'Process LINK', :class => "btn btn-primary"
